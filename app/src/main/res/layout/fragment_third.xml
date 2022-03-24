@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/view_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Anda"
+        android:textAlignment="center"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/view_usia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usia Anda"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/view_Alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat Anda"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/view_pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pekerjaan Anda"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btnFragmentKeEmpat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go To Page 4"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"/>
+</LinearLayout>
