@@ -44,6 +44,15 @@ class ThirdFragment : Fragment() {
             }
         }
     }
+
+    private fun getGanEp(value: Int): String{
+        if (value%2 == 0){
+            return "Ganjil"
+        } else {
+            return "Genap"
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -72,13 +81,6 @@ class ThirdFragment : Fragment() {
         binding.viewNama.text = "Nama Anda " + nama
     }
 
-    private fun getGanEp(value: Int): String{
-        if (value%2 == 0){
-            return "Ganjil"
-        } else {
-            return "Genap"
-        }
-    }
 
 
 }

@@ -45,11 +45,14 @@ class FourthFragment : Fragment() {
 
         val dataDiri = DataDiri(valueEditUsia, valueEditAlamat, valueEditPekerjaan)
         val bundle = Bundle()
+        //Pakai Bundle
 //        bundle.apply {
 //            putInt(EXTRA_USIA, valueEditUsia)
 //            putString(EXTRA_ALAMAT, valueEditAlamat)
 //            putString(EXTRA_PEKERJAAN, valueEditPekerjaan)
 //        }
+
+        //Pakai parcleable
         bundle.putParcelable(EXTRA_DATADIRI, dataDiri)
         setFragmentResult("reqKey", bundle)
         it.findNavController().popBackStack()
