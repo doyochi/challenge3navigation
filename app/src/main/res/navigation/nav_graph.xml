@@ -31,9 +31,16 @@
             android:name="keyNama"
             app:argType="string"
             android:defaultValue='"Ini default nama"' />
+        <argument
+            android:name="keyDataDiri"
+            app:argType="id.hikmah.binar.challenge3navigation.DataDiri" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
         android:name="id.hikmah.binar.challenge3navigation.FourthFragment"
-        android:label="FourthFragment" />
+        android:label="FourthFragment" >
+        <action
+            android:id="@+id/action_fourthFragment_to_thirdFragment2"
+            app:destination="@id/thirdFragment" />
+    </fragment>
 </navigation>

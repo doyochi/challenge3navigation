@@ -2,39 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_margin="20dp">
+    android:layout_margin="20dp"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edit_usia"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Usia"
-        android:background="@drawable/backdrop"
-        android:padding="10dp"
-        android:layout_marginVertical="10dp"/>
-    <EditText
-        android:id="@+id/edit_alamat"
+        android:text="Screen 1"
+        android:textSize="10pt"
+        android:textAlignment="center"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Alamat"
-        android:background="@drawable/backdrop"
-        android:padding="10dp"
-        android:layout_marginVertical="10dp"/>
-    <EditText
-        android:id="@+id/edit_pekerjaan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Pekerjaan"
-        android:background="@drawable/backdrop"
-        android:padding="10dp"
-        android:layout_marginVertical="10dp"/>
-    <Button
-        android:id="@+id/btnFragmentKetiga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go To Page 3"
-        android:textAllCaps="false"
-        android:layout_margin="10dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/edit_usia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Usia"
+            android:background="@drawable/backdrop"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"/>
+        <EditText
+            android:id="@+id/edit_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Alamat"
+            android:background="@drawable/backdrop"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"/>
+        <EditText
+            android:id="@+id/edit_pekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Pekerjaan"
+            android:background="@drawable/backdrop"
+            android:padding="10dp"
+            android:layout_marginVertical="10dp"/>
+        <Button
+            android:id="@+id/btnFragmentKetiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Screen 3"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
 </LinearLayout>
