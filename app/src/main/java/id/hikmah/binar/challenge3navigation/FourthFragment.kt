@@ -43,14 +43,14 @@ class FourthFragment : Fragment() {
 
     private fun sendToThird(valueEditUsia: Int, valueEditAlamat: String, valueEditPekerjaan: String, it: View){
 
-//        val dataDiri = DataDiri(valueEditUsia, valueEditAlamat, valueEditPekerjaan)
+        val dataDiri = DataDiri(valueEditUsia, valueEditAlamat, valueEditPekerjaan)
         val bundle = Bundle()
-        bundle.apply {
-            putInt(EXTRA_USIA, valueEditUsia)
-            putString(EXTRA_ALAMAT, valueEditAlamat)
-            putString(EXTRA_PEKERJAAN, valueEditPekerjaan)
-        }
-//        val r_usia = ThirdFragmentArgs.fromBundle(arguments as Bundle).keyDataDiri
+//        bundle.apply {
+//            putInt(EXTRA_USIA, valueEditUsia)
+//            putString(EXTRA_ALAMAT, valueEditAlamat)
+//            putString(EXTRA_PEKERJAAN, valueEditPekerjaan)
+//        }
+        bundle.putParcelable(EXTRA_DATADIRI, dataDiri)
         setFragmentResult("reqKey", bundle)
         it.findNavController().popBackStack()
     }

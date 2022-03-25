@@ -22,23 +22,25 @@ class ThirdFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setFragmentResultListener("reqKey"){ _, bundle ->
-            val result_usia = bundle.getInt(EXTRA_USIA).toString().toInt()
+            //Pakai Parcelable
+            val result = bundle.getParcelable<DataDiri>(EXTRA_DATADIRI)
+            val result_usia = result?.usia.toString().toInt()
             val ganEp = getGanEp(result_usia)
-            binding.viewUsia.apply{
-                visibility = View.VISIBLE
-                text = "Usia Anda " + result_usia + ", bernilai " + ganEp
-            }
+            val result_alamat = result?.alamat.toString()
+            val result_pekerjaan = result?.pekerjaan.toString()
 
-            val result_alamat = bundle.getString(EXTRA_ALAMAT)
-            binding.viewAlamat.apply{
-                visibility = View.VISIBLE
-                text = "Alamat Anda " + result_alamat
-            }
-
-            val result_pekerjaan = bundle.getString(EXTRA_PEKERJAAN)
-            binding.viewPekerjaan.apply {
-                visibility = View.VISIBLE
-                text = "Pekerjaab Anda " + result_pekerjaan
+            // Pakai bundle
+//            val result_usia = bundle.getInt(EXTRA_USIA).toString().toInt()
+//            val ganEp = getGanEp(result_usia)
+//            val result_alamat = bundle.getString(EXTRA_ALAMAT)
+//            val result_pekerjaan = bundle.getString(EXTRA_PEKERJAAN)
+            binding.apply{
+                viewUsia.visibility = View.VISIBLE
+                viewUsia.text = "Usia Anda " + result_usia + ", bernilai " + ganEp
+                viewAlamat.visibility = View.VISIBLE
+                viewAlamat.text = "Alamat Anda " + result_alamat
+                viewPekerjaan.visibility = View.VISIBLE
+                viewPekerjaan.text = "Pekerjaan Anda " + result_pekerjaan
             }
         }
     }
